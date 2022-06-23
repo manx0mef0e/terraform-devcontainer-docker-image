@@ -14,7 +14,7 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 ARG GO_VERSION=1.18.3
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" "true" "true" \ 
+    && bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" "true" "true" \
     && bash /tmp/library-scripts/go-debian.sh \
     && bash /tmp/library-scripts/powershell-debian.sh \
     && apt-get install -y graphviz \
